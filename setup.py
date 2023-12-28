@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="myawsname",
+    name="pysql",
     version="0.0.1",
     author="cm-taro",
     author_email="cmtaro@example.com",
