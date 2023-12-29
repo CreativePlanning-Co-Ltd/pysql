@@ -47,7 +47,7 @@ class Data_Source(BaseModel):
 
     def find(self,txt:str,EXACT_MATCH=0):
         if EXACT_MATCH == 0:
-            return df[self.data_source.apply(lambda row: any(txt.upper() in str(cell).upper() for cell in row), axis=1)]
+            return self.data_source[self.data_source.apply(lambda row: any(txt.upper() in str(cell).upper() for cell in row), axis=1)]
         elif EXACT_MATCH == 1:
             return self.data_source[self.data_source.apply(lambda row: any(txt in str(cell) for cell in row), axis=1)]
         else:
